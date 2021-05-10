@@ -9,7 +9,7 @@
 
 #### *Analysis*
 
-The array is not sorted, so we can’t use two-pointers. Let’s say we have [1,2,2,7] with a target of 9. Say we start with 1 again. Let’s ask a simple question, what number must be added to 1 to get a value of 9. To find this, we simply take 9–1 = 8, so the answer is 8. Then we can employ a hashtable to find 8 which only takes O(1). So in total, the time complexity is O(N).
+Brute force is O(N<sup>2</sup>). Can we solve the problem in O(N)? The array is not sorted, so we can’t use two-pointers. Let’s say we have [1,2,2,7] with a target of 9. Say we start with 1 again. Let’s ask a simple question, what number must be added to 1 to get a value of 9. To find this, we simply take 9–1 = 8, so the answer is 8. Then we can employ a hashtable to find 8 which only takes O(1). So in total, the time complexity is O(N).
 
 #### *Solution*
 
@@ -20,7 +20,7 @@ Step 2: Iterate the array a second time, this time taking the current number, de
 ### 2. [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 
 #### *Analysis*
-Brute force is O(N<sup>2;</sup>).
+Brute force is O(N<sup>2</sup>). Can we solve the problem in O(N)? We can initialize min_price is the first element in the array, and initialize the max_profit as 0. As we are visiting each element in the array, we can update the
 h<sup>&theta;</sup>(x) = &theta;<sub>o</sub> x + &theta;<sub>1</sub>x
 
 #### *Solution*
