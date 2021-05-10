@@ -20,7 +20,7 @@ Step 2: Iterate the array a second time, this time taking the current number, de
 ### 2. [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 
 #### *Analysis*
-Brute force is O(N^2).
+Brute force is O(N<sup>2;</sup>).
 h<sup>&theta;</sup>(x) = &theta;<sub>o</sub> x + &theta;<sub>1</sub>x
 
 #### *Solution*
