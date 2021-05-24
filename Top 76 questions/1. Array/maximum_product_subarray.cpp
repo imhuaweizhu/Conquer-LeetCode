@@ -1,4 +1,3 @@
-
 #include <vector>
 #include <iostream>
 #include <algorithm> // for std::min(), std::max()
@@ -9,7 +8,7 @@ LeetCode #11
 maximum product subarray
 
 ***********
-Brute force solution, Complexity is O(N^2):
+Brute force solution, Complexity is O(N^2)
 
 ***********
 A better solution with O(N) Complexity:
@@ -31,24 +30,29 @@ int solution(vector<int> arr)
     int min_i = arr[0];
     int max_i = arr[0];
 
+    cout << "i=0"
+         << ", min_i=" << arr[0] << ", max_i=" << arr[0] << ", result=" << arr[0] << "\n\n";
+
     for (int i = 1; i < arr.size(); i++)
     {
         if (arr[i] < 0)
         {
             swap(min_i, max_i);
         }
-        max_i = max(arr[i], max_i * arr[i]);
         min_i = min(arr[i], min_i * arr[i]);
+        max_i = max(arr[i], max_i * arr[i]);
+
+        //result = min(result, min_i); // this can be used for find the minimum product of contigious subarray
         result = max(result, max_i);
 
-        cout << "i=" << i << ", max_i=" << max_i << ", min_i=" << min_i << ", result=" << result << "\n\n";
+        cout << "i=" << i << ", min_i=" << min_i << ", max_i=" << max_i << ", result=" << result << "\n\n";
     }
     return result;
 }
 
 int main()
 {
-    vector<int> test_arr = {-2, 0, -7};
+    vector<int> test_arr = {-3, 0, 7};
     int result = solution(test_arr);
     cout << result;
     cout << "\n";
